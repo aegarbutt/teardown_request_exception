@@ -1,0 +1,247 @@
+REQUEST #1
+----------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID1-pid18176-Built-In: 1-Built-In
+ReqID1-pid18176-Custom: 1-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:11 GMT
+
+ReqID1-pid18176
+
+
+
+REQUEST #2
+----------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID2-pid18176-Built-In: 2-Built-In
+ReqID2-pid18176-Custom: 2-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:11 GMT
+
+ReqID2-pid18176
+
+
+
+REQUEST #3
+----------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID3-pid18176-Built-In: 3-Built-In
+ReqID3-pid18176-Custom: 3-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:11 GMT
+
+ReqID3-pid18176
+
+
+
+REQUEST #4
+----------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID4-pid18176-Built-In: 4-Built-In
+ReqID4-pid18176-Custom: 4-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:12 GMT
+
+ReqID4-pid18176
+
+
+
+REQUEST #5
+----------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID5-pid18176-Built-In: 5-Built-In
+ReqID5-pid18176-Custom: 5-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:12 GMT
+
+ReqID5-pid18176
+
+
+
+REQUEST #6 (EXCEPTION THROWN)
+-----------------------------
+GET /?e=T HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 500 INTERNAL SERVER ERROR
+Content-Type: text/html
+Content-Length: 291
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:22 GMT
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request.  Either the server is overloaded or there is an error in the application.</p>
+
+
+
+REQUEST #7 (See Additional 'ReqID{x}-pid{y}' Headers in Response)
+-----------------------------------------------------------------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID7-pid18176-Built-In: 7-Built-In
+ReqID6-pid18176-Custom: 7-Custom
+ReqID7-pid18176-Custom: 7-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:25 GMT
+
+ReqID7-pid18176
+
+
+
+REQUEST #8 (See Additional 'ReqID{x}-pid{y}' Headers in Response)
+-----------------------------------------------------------------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID8-pid18176-Built-In: 8-Built-In
+ReqID6-pid18176-Custom: 8-Custom
+ReqID7-pid18176-Custom: 8-Custom
+ReqID8-pid18176-Custom: 8-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:33 GMT
+
+ReqID8-pid18176
+
+
+
+REQUEST #9 (See Additional 'ReqID{x}-pid{y}' Headers in Response)
+-----------------------------------------------------------------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 15
+ReqID9-pid18176-Built-In: 9-Built-In
+ReqID6-pid18176-Custom: 9-Custom
+ReqID7-pid18176-Custom: 9-Custom
+ReqID8-pid18176-Custom: 9-Custom
+ReqID9-pid18176-Custom: 9-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:33 GMT
+
+ReqID9-pid18176
+
+
+
+REQUEST #10 (See Additional 'ReqID{x}-pid{y}' Headers in Response)
+------------------------------------------------------------------
+GET / HTTP/1.1
+Host: localhost:5000
+Proxy-Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+
+
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 16
+ReqID10-pid18176-Built-In: 10-Built-In
+ReqID6-pid18176-Custom: 10-Custom
+ReqID7-pid18176-Custom: 10-Custom
+ReqID8-pid18176-Custom: 10-Custom
+ReqID9-pid18176-Custom: 10-Custom
+ReqID10-pid18176-Custom: 10-Custom
+Server: Werkzeug/0.9.6 Python/2.7.3
+Date: Wed, 18 Jun 2014 20:33:36 GMT
+
+ReqID10-pid18176

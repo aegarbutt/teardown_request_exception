@@ -1,0 +1,16 @@
+uwsgi:
+    http: localhost:5000
+    autoload: true
+    master: true
+    no-orphans: true
+    memory-report: true
+    enable-threads: true
+    log-micros: true
+    log-date: true
+    die-on-term: true
+    listen: 100
+    buffer-size: 32768
+    module: flask_teardown_exception
+    callable: app
+    virtualenv: <path-to-virtualenv>/teardown_request_exception
+    workers: 1

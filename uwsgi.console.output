@@ -1,0 +1,62 @@
+$ uwsgi --yaml uwsgi.yaml
+[uWSGI] getting YAML configuration from uwsgi
+option "http" found in plugin /usr/lib/uwsgi/plugins/http_plugin.so
+Wed Jun 18 20:20:30 2014 - option "module" found in plugin /usr/lib/uwsgi/plugins/python_plugin.so
+Wed Jun 18 20:20:30 2014 - *** Starting uWSGI 1.9.17.1-debian (64bit) on [Wed Jun 18 20:20:30 2014] ***
+Wed Jun 18 20:20:30 2014 - compiled with version: 4.6.3 on 02 December 2013 21:36:01
+Wed Jun 18 20:20:30 2014 - os: Linux-3.2.0-64-virtual #97-Ubuntu SMP Wed Jun 4 22:16:47 UTC 2014
+Wed Jun 18 20:20:30 2014 - nodename: <hostname>
+Wed Jun 18 20:20:30 2014 - machine: x86_64
+Wed Jun 18 20:20:30 2014 - clock source: unix
+Wed Jun 18 20:20:30 2014 - pcre jit disabled
+Wed Jun 18 20:20:30 2014 - detected number of CPU cores: 4
+Wed Jun 18 20:20:30 2014 - current working directory: <Current Working Directory>
+Wed Jun 18 20:20:30 2014 - detected binary path: /usr/bin/uwsgi-core
+Wed Jun 18 20:20:30 2014 - your processes number limit is 119711
+Wed Jun 18 20:20:30 2014 - your memory page size is 4096 bytes
+Wed Jun 18 20:20:30 2014 - detected max file descriptor number: 8192
+Wed Jun 18 20:20:30 2014 - lock engine: pthread robust mutexes
+Wed Jun 18 20:20:30 2014 - thunder lock: disabled (you can enable it with --thunder-lock)
+Wed Jun 18 20:20:30 2014 - uWSGI http bound on localhost:5000 fd 3
+Wed Jun 18 20:20:30 2014 - uwsgi ` 0 bound to TCP address 127.0.0.1:50230 (port auto-assigned) fd 3
+Wed Jun 18 20:20:30 2014 - Python version: 2.7.3 (default, Feb 27 2014, 20:09:21)  [GCC 4.6.3]
+Wed Jun 18 20:20:30 2014 - Set PythonHome to <Virtualenv Path>/teardown_request_exception
+Wed Jun 18 20:20:30 2014 - Python main interpreter initialized at 0x215af40
+Wed Jun 18 20:20:30 2014 - python threads support enabled
+Wed Jun 18 20:20:30 2014 - your server socket listen backlog is limited to 100 connections
+Wed Jun 18 20:20:30 2014 - your mercy for graceful operations on workers is 60 seconds
+Wed Jun 18 20:20:30 2014 - mapped 202928 bytes (198 KB) for 1 cores
+Wed Jun 18 20:20:30 2014 - *** Operational MODE: single process ***
+Wed Jun 18 20:20:30 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x215af40 pid: 17836 (default app)
+Wed Jun 18 20:20:30 2014 - *** uWSGI is running in multiple interpreter mode ***
+Wed Jun 18 20:20:30 2014 - spawned uWSGI master process (pid: 17836)
+Wed Jun 18 20:20:30 2014 - spawned uWSGI worker 1 (pid: 17841, cores: 1)
+Wed Jun 18 20:20:30 2014 - spawned uWSGI http 1 (pid: 17842)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12070912 bytes/11MB} [pid: 17841|app: 0|req: 1/1] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:01 2014] GET / => generated 15 bytes in 4364 micros (HTTP/1.1 200) 4 headers in 151 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12103680 bytes/11MB} [pid: 17841|app: 0|req: 2/2] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:05 2014] GET / => generated 15 bytes in 649 micros (HTTP/1.1 200) 4 headers in 151 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12165120 bytes/11MB} [pid: 17841|app: 0|req: 3/3] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:06 2014] GET / => generated 15 bytes in 592 micros (HTTP/1.1 200) 4 headers in 151 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12165120 bytes/11MB} [pid: 17841|app: 0|req: 4/4] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:06 2014] GET / => generated 15 bytes in 644 micros (HTTP/1.1 200) 4 headers in 151 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12165120 bytes/11MB} [pid: 17841|app: 0|req: 5/5] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:06 2014] GET / => generated 15 bytes in 605 micros (HTTP/1.1 200) 4 headers in 151 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "<Virtualenv Path>/teardown_request_exception/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "<Virtualenv Path>/teardown_request_exception/local/lib/python2.7/site-packages/flask/app.py", line 1825, in wsgi_app
+    ctx.auto_pop(error)
+  File "<Virtualenv Path>/teardown_request_exception/local/lib/python2.7/site-packages/flask/ctx.py", line 374, in auto_pop
+    self.pop(exc)
+  File "<Virtualenv Path>/teardown_request_exception/local/lib/python2.7/site-packages/flask/ctx.py", line 341, in pop
+    self.app.do_teardown_request(exc)
+  File "<Virtualenv Path>/teardown_request_exception/local/lib/python2.7/site-packages/flask/app.py", line 1714, in do_teardown_request
+    rv = func(exc)
+  File "./teardown_request_exception.py", line 53, in teardown
+    raise Exception("Exception in 'teardown_request'!")
+Exception: Exception in 'teardown_request'!
+{address space usage: 77033472 bytes/73MB} {rss usage: 12206080 bytes/11MB} [pid: 17841|app: 0|req: 6/6] 127.0.0.1 () {34 vars in 592 bytes} [Wed Jun 18 20:21:15 2014] GET /?e=T => generated 0 bytes in 1947 micros (HTTP/1.1 200) 4 headers in 151 bytes (0 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12218368 bytes/11MB} [pid: 17841|app: 0|req: 7/7] 127.0.0.1 () {34 vars in 585 bytes} [Wed Jun 18 20:21:21 2014] GET / => generated 15 bytes in 607 micros (HTTP/1.1 200) 5 headers in 185 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12230656 bytes/11MB} [pid: 17841|app: 0|req: 8/8] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:25 2014] GET / => generated 15 bytes in 603 micros (HTTP/1.1 200) 6 headers in 219 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12234752 bytes/11MB} [pid: 17841|app: 0|req: 9/9] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:25 2014] GET / => generated 15 bytes in 617 micros (HTTP/1.1 200) 7 headers in 253 bytes (1 switches on core 0)
+{address space usage: 77033472 bytes/73MB} {rss usage: 12234752 bytes/11MB} [pid: 17841|app: 0|req: 10/10] 127.0.0.1 () {36 vars in 616 bytes} [Wed Jun 18 20:21:25 2014] GET / => generated 16 bytes in 607 micros (HTTP/1.1 200) 8 headers in 295 bytes (1 switches on core 0)
+^CWed Jun 18 20:22:54 2014 - SIGINT/SIGQUIT received...killing workers...
+Wed Jun 18 20:22:54 2014 - gateway "uWSGI http 1" has been buried (pid: 17842)
+Wed Jun 18 20:22:55 2014 - worker 1 buried after 1 seconds
+Wed Jun 18 20:22:55 2014 - goodbye to uWSGI.

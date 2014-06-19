@@ -1,0 +1,31 @@
+$ python flask_.py
+ * Running on http://127.0.0.1:5000/
+127.0.0.1 - - [18/Jun/2014 20:33:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:11] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:12] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:22] "GET /?e=T HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/werkzeug/serving.py", line 177, in run_wsgi
+    execute(self.server.app)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/werkzeug/serving.py", line 165, in execute
+    application_iter = app(environ, start_response)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/flask/app.py", line 1825, in wsgi_app
+    ctx.auto_pop(error)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/flask/ctx.py", line 374, in auto_pop
+    self.pop(exc)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/flask/ctx.py", line 341, in pop
+    self.app.do_teardown_request(exc)
+  File "<Virtualenv Path>/teardown_request_exception/lib/python2.7/site-packages/flask/app.py", line 1714, in do_teardown_request
+    rv = func(exc)
+  File "<Current Working Directory>/teardown_request_exception.py", line 53, in teardown
+    raise Exception("Exception in 'teardown_request'!")
+Exception: Exception in 'teardown_request'!
+127.0.0.1 - - [18/Jun/2014 20:33:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jun/2014 20:33:36] "GET / HTTP/1.1" 200 -
